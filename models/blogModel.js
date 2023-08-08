@@ -9,10 +9,6 @@ const blogSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    date: {
-        type: Date,
-        required: true,
-    },
     shortDesc:{
         type: String,
         required: true,

@@ -22,7 +22,13 @@ const port = process.env.PORT || 5000;
 
 
 // MIDDLEWARE'S
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:5173', // Corrected URL without the trailing slash
+    credentials: true, 
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": true,
+
+}));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());

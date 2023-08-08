@@ -4,7 +4,8 @@ import User from "../models/userModel.js";
 const protect = async (req, res, next) => {
     let token;
 
-    token = req.cookies.proton_tech;
+    console.log(req.cookies.jwt);
+    token = req.cookies.jwt;
 
     if (token) {
         try {
